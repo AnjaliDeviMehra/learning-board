@@ -1,16 +1,150 @@
-<!DOCTTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel=" stlesheet" href=" style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – LearningBoard</title>
+    <meta name="description" content="Get in touch with the LearningBoard team. Send us a message with questions, feedback, or suggestions.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        <header>
-        <h1>Welcome to the Home Page</h1></header>
-        <main></main>
-        <footer></footer>
-    </body>
+    <header>
+        <div>
+            <a href="index.html">📚 LearningBoard</a>
+
+            <button aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+            </button>
+
+            <nav id="primary-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Experiences</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="share.html">Share Your Learning</a></li>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>Contact Us</h1>
+            <p>
+                Have a question, suggestion, or just want to say hello? Fill out the form below
+                and the LearningBoard team will get back to you as soon as possible.
+            </p>
+        </section>
+
+        <section>
+            <h2>Send Us a Message</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your full name"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div>
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What is your message about?"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Other Ways to Reach Us</h2>
+            <ul>
+                <li>
+                    <h3>Frequently Asked Questions</h3>
+                    <p>Check the <a href="faq.html">FAQ page</a> — your question may already be answered there.</p>
+                </li>
+                <li>
+                    <h3>Learn About the Project</h3>
+                    <p>Visit the <a href="about.html">About page</a> to learn more about the team and the mission behind LearningBoard.</p>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <h4>LearningBoard</h4>
+                <p>Share workplace insights. Learn from peers. Grow your career.</p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="contact.html">Send Feedback</a></li>
+                    <li><a href="faq.html">Get Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics – York University – 2026.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
