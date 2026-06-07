@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Learning – LearningBoard</title>
+    <meta name="description" content="Share your workplace experience with fellow students on LearningBoard. Submit a learning post about Communication, Tech Skills, Teamwork, or Problem Solving.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== HEADER & NAV ===== -->
+    <header>
+        <div>
+            <a href="index.html">📚 LearningBoard</a>
+
+            <button aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+            </button>
+
+            <nav id="primary-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Experiences</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="share.html" aria-current="page">Share Your Learning</a></li>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <section>
+            <h1>Share Your Learning</h1>
+            <p>
+                Had a great workplace experience? Learned something useful during an
+                internship, co-op, or part-time job? Share it here so other students can
+                benefit from your insight.
+            </p>
+        </section>
+
+        <!-- Guidelines -->
+        <section>
+            <h2>Before You Post</h2>
+            <p>A few tips to make your post helpful for others:</p>
+            <ol>
+                <li>Focus on <strong>one specific lesson</strong> you learned at work.</li>
+                <li>Explain the <strong>situation</strong> — what were you doing and why?</li>
+                <li>Share the <strong>outcome</strong> — what changed or improved?</li>
+                <li>Keep it <strong>respectful</strong> — avoid naming managers or sharing confidential information.</li>
+                <li>Write as if you are <strong>giving advice to a friend</strong> who is about to start the same role.</li>
+            </ol>
+        </section>
+
+        <!-- Share Form -->
+        <section>
+            <h2>Submit Your Experience</h2>
+
+            <form id="share-form" action="#" method="post" novalidate>
+
+                <!-- About You -->
+                <fieldset>
+                    <legend>About You</legend>
+
+                    <div>
+                        <label for="share-name">Display Name <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="share-name"
+                            name="display-name"
+                            required
+                            minlength="2"
+                            maxlength="50"
+                            placeholder="e.g. Jordan L."
+                        >
+                        <small>This is the name shown on your post. You can use a nickname or initials.</small>
+                    </div>
+
+                    <div>
+                        <label for="share-email">Email Address <span aria-hidden="true">*</span></label>
+                        <input
+                            type="email"
+                            id="share-email"
+                            name="email"
+                            required
+                            placeholder="e.g. jordan@example.com"
+                            autocomplete="email"
+                        >
+                        <small>Your email will not be displayed publicly. We use it only if we need to follow up.</small>
+                    </div>
+                </fieldset>
+
+                <!-- Work Details -->
+                <fieldset>
+                    <legend>Your Work Experience</legend>
+
+                    <div>
+                        <label for="share-role">Job Title or Role <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="share-role"
+                            name="role"
+                            required
+                            maxlength="100"
+                            placeholder="e.g. Marketing Intern"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="share-company">Company or Organization <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="share-company"
+                            name="company"
+                            required
+                            maxlength="100"
+                            placeholder="e.g. BrightPath Agency"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="share-duration">How long was your placement?</label>
+                        <select id="share-duration" name="duration">
+                            <option value="">— Select duration —</option>
+                            <option value="less-than-1">Less than 1 month</option>
+                            <option value="1-3">1 – 3 months</option>
+                            <option value="4-8">4 – 8 months</option>
+                            <option value="8-12">8 – 12 months</option>
+                            <option value="over-12">Over 12 months</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- The Post Itself -->
+                <fieldset>
+                    <legend>Your Post</legend>
+
+                    <div>
+                        <label for="share-title">Post Title <span aria-hidden="true">*</span></label>
+                        <input
+                            type="text"
+                            id="share-title"
+                            name="title"
+                            required
+                            minlength="5"
+                            maxlength="120"
+                            placeholder="e.g. How I Learned to Give Better Presentations"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="share-category">Skill Category <span aria-hidden="true">*</span></label>
+                        <select id="share-category" name="category" required>
+                            <option value="">— Select a category —</option>
+                            <option value="communication">💬 Communication</option>
+                            <option value="tech">💻 Tech Skills</option>
+                            <option value="teamwork">👥 Teamwork</option>
+                            <option value="problem-solving">🧩 Problem Solving</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="share-body">Your Experience <span aria-hidden="true">*</span></label>
+                        <textarea
+                            id="share-body"
+                            name="body"
+                            required
+                            minlength="50"
+                            maxlength="3000"
+                            rows="10"
+                            placeholder="Describe the situation, what you learned, and why it matters…"
+                        ></textarea>
+                        <small>Minimum 50 characters. Try to be specific so readers can apply your advice.</small>
+                    </div>
+
+                    <div>
+                        <span id="share-type-label">Post Type <span aria-hidden="true">*</span></span>
+                        <div role="radiogroup" aria-labelledby="share-type-label">
+                            <div>
+                                <input type="radio" id="type-experience" name="post-type" value="experience" required checked>
+                                <label for="type-experience">Experience — A short workplace lesson or tip</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="type-story" name="post-type" value="story">
+                                <label for="type-story">Success Story — A longer narrative about growth or achievement</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Agreement & Submit -->
+                <fieldset>
+                    <legend>Review and Submit</legend>
+
+                    <div>
+                        <input type="checkbox" id="share-agree" name="agree" required>
+                        <label for="share-agree">
+                            I confirm that this post is my own writing, does not contain
+                            confidential information, and is respectful toward others.
+                            <span aria-hidden="true">*</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit">Submit Post</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
+
+                    <p><small>Fields marked with <span aria-hidden="true">*</span> are required.</small></p>
+                </fieldset>
+
+            </form>
+        </section>
+
+        <!-- What Happens Next -->
+        <aside>
+            <h2>What Happens After You Submit?</h2>
+            <p>
+                Your post will appear on the
+                <a href="browse.html">Browse Experiences</a> page where other students can
+                read it, vote it as helpful, and leave comments. If you selected "Success
+                Story," it may also be featured on the
+                <a href="success-stories.html">Success Stories</a> page.
+            </p>
+        </aside>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div>
+            <div>
+                <h4>LearningBoard</h4>
+                <p>Share workplace insights. Learn from peers. Grow your career.</p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="contact.html">Send Feedback</a></li>
+                    <li><a href="faq.html">Get Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
