@@ -1,16 +1,208 @@
-<!DOCTTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel=" stlesheet" href=" style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ – LearningBoard</title>
+    <meta name="description" content="Frequently asked questions about LearningBoard — how to share experiences, browse posts, and get the most out of the platform.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        <header>
-        <h1>Welcome to the Home Page</h1></header>
-        <main></main>
-        <footer></footer>
-    </body>
+    <!-- ===== HEADER & NAV ===== -->
+    <header>
+        <div>
+            <a href="index.html">📚 LearningBoard</a>
+
+            <button aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+            </button>
+
+            <nav id="primary-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Experiences</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="share.html">Share Your Learning</a></li>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <section>
+            <h1>Frequently Asked Questions</h1>
+            <p>
+                Find answers to common questions about using LearningBoard. If your question
+                isn't listed here, feel free to <a href="contact.html">contact us</a>.
+            </p>
+        </section>
+
+        <!-- General Questions -->
+        <section>
+            <h2>General</h2>
+
+            <dl>
+                <dt>What is LearningBoard?</dt>
+                <dd>
+                    LearningBoard is a student-driven platform where learners share real
+                    workplace insights from internships, co-op placements, and part-time
+                    jobs. It helps students prepare for professional environments by learning
+                    from their peers' experiences.
+                </dd>
+
+                <dt>Who can use LearningBoard?</dt>
+                <dd>
+                    Anyone can browse and read posts. The platform is designed primarily for
+                    post-secondary students who are preparing for, currently in, or recently
+                    finished a work-integrated learning experience.
+                </dd>
+
+                <dt>Is LearningBoard free to use?</dt>
+                <dd>
+                    Yes. LearningBoard is completely free. It was built as a student project
+                    at York University and is hosted on GitHub Pages at no cost.
+                </dd>
+            </dl>
+        </section>
+
+        <!-- Sharing Experiences -->
+        <section>
+            <h2>Sharing Experiences</h2>
+
+            <dl>
+                <dt>How do I share my workplace experience?</dt>
+                <dd>
+                    Go to the <a href="share.html">Share Your Learning</a> page, fill out
+                    the form with details about your role, company, and the lesson you
+                    learned, then submit it. Your post will appear on the Browse Experiences
+                    page.
+                </dd>
+
+                <dt>Do I need to use my real name?</dt>
+                <dd>
+                    You can use your first name, a nickname, or initials — whatever you are
+                    comfortable with. We do not require a full legal name.
+                </dd>
+
+                <dt>What kind of experiences can I share?</dt>
+                <dd>
+                    Anything you learned at work that could help another student. This could
+                    be a communication tip, a technical skill, a teamwork strategy, or a
+                    problem-solving approach. Posts should be respectful and constructive.
+                </dd>
+
+                <dt>Can I edit or delete my post after submitting?</dt>
+                <dd>
+                    Currently, posts cannot be edited or deleted through the site. If you
+                    need a change, please <a href="contact.html">contact us</a> and we will
+                    help.
+                </dd>
+            </dl>
+        </section>
+
+        <!-- Browsing and Interacting -->
+        <section>
+            <h2>Browsing and Interacting</h2>
+
+            <dl>
+                <dt>How do I find posts about a specific skill?</dt>
+                <dd>
+                    On the <a href="browse.html">Browse Experiences</a> page, you can
+                    filter posts by category: Communication, Tech Skills, Teamwork, or
+                    Problem Solving. You can also search by keyword.
+                </dd>
+
+                <dt>What does the "Helpful" button do?</dt>
+                <dd>
+                    Clicking "Helpful" lets the author know that their post was useful to
+                    you. Posts with more helpful votes appear higher in the feed, making it
+                    easier for others to find valuable content.
+                </dd>
+
+                <dt>Can I save posts to read later?</dt>
+                <dd>
+                    Yes. Click the "Save" button on any post to bookmark it. You can view
+                    your saved posts from the Browse Experiences page using the saved
+                    filter.
+                </dd>
+            </dl>
+        </section>
+
+        <!-- Technical Questions -->
+        <section>
+            <h2>Technical</h2>
+
+            <dl>
+                <dt>What technologies is LearningBoard built with?</dt>
+                <dd>
+                    LearningBoard uses HTML5, CSS3, and vanilla JavaScript — no external
+                    frameworks or libraries. It is hosted on GitHub Pages.
+                </dd>
+
+                <dt>Does LearningBoard store my data?</dt>
+                <dd>
+                    LearningBoard is a front-end application and does not have a back-end
+                    server or database. Any data entered into forms is handled on the client
+                    side only. In the future, local storage may be used to save preferences.
+                </dd>
+
+                <dt>I found a bug. How do I report it?</dt>
+                <dd>
+                    Please use the <a href="contact.html">Contact</a> page or open an issue
+                    on our
+                    <a href="https://github.com/AnjaliDeviMehra/learning-board" target="_blank" rel="noopener noreferrer">GitHub repository</a>.
+                </dd>
+            </dl>
+        </section>
+
+        <!-- Still have questions? -->
+        <section>
+            <h2>Still Have Questions?</h2>
+            <p>
+                If you didn't find what you were looking for, reach out through our
+                <a href="contact.html">Contact page</a>. We are happy to help.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div>
+            <div>
+                <h4>LearningBoard</h4>
+                <p>Share workplace insights. Learn from peers. Grow your career.</p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="skills-guide.html">Skills Guide</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="contact.html">Send Feedback</a></li>
+                    <li><a href="faq.html">Get Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
