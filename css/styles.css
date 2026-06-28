@@ -749,3 +749,145 @@ main aside h2 {
         box-sizing: border-box;
     }
 }
+
+/* ===== Phase 2: Browse and Credits page styling ===== */
+
+/* Browse page article cards */
+.browse-page > section > article {
+    background-color: #ffffff;
+    border: 1px solid #d9e8df;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(27, 94, 59, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.browse-page > section > article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(27, 94, 59, 0.14);
+}
+
+.browse-page > section > article h3 {
+    color: #1b5e3b;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.browse-page > section > article p strong {
+    color: #1b5e3b;
+}
+
+.browse-page > section > article a {
+    font-weight: bold;
+}
+
+/* Browse category list */
+.browse-page section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-left: 0;
+    list-style: none;
+}
+
+.browse-page section:nth-of-type(2) li {
+    background-color: #e8f5ee;
+    border-left: 4px solid #1b5e3b;
+    border-radius: 6px;
+    padding: 14px 16px;
+}
+
+/* Tables for browse and credits pages */
+.browse-page table,
+.credits-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 25px;
+    background-color: #ffffff;
+    border: 1px solid #d9e8df;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(27, 94, 59, 0.08);
+}
+
+.browse-page caption,
+.credits-page caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    color: #1b5e3b;
+    margin-bottom: 8px;
+}
+
+.browse-page thead,
+.credits-page thead {
+    background-color: #1b5e3b;
+    color: #ffffff;
+}
+
+.browse-page th,
+.browse-page td,
+.credits-page th,
+.credits-page td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e8f5ee;
+    text-align: left;
+    vertical-align: top;
+}
+
+.browse-page tbody tr:nth-child(even),
+.credits-page tbody tr:nth-child(even) {
+    background-color: #f7fbf8;
+}
+
+.browse-page tbody tr:hover,
+.credits-page tbody tr:hover {
+    background-color: #e8f5ee;
+}
+
+/* Credits page card layout */
+.credits-page section,
+.credits-page aside {
+    background-color: #ffffff;
+    border: 1px solid #d9e8df;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(27, 94, 59, 0.08);
+}
+
+.credits-page section h2,
+.credits-page aside h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8f5ee;
+}
+
+/* Responsive updates for browse and credits pages */
+@media (max-width: 768px) {
+    .browse-page section:nth-of-type(2) ul {
+        grid-template-columns: 1fr;
+    }
+
+    .browse-page table,
+    .credits-page table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .browse-page th,
+    .browse-page td,
+    .credits-page th,
+    .credits-page td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .browse-page > section > article,
+    .credits-page section,
+    .credits-page aside {
+        padding: 16px;
+    }
+}
