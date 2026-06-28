@@ -3,372 +3,425 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skills Guide — Learning Board</title>
+  <title>Skills Guide – LearningBoard</title>
+  <meta name="description" content="Explore practical, project-led learning paths for popular workplace skills including web development, data science, DevOps, and more.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- ===== HEADER & NAV ===== -->
   <header>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="browse.html">Browse</a></li>
-        <li><a href="skills-guide.html" aria-current="page">Skills Guide</a></li>
-        <li><a href="post.html">Post</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div>
+      <a href="index.html">📚 LearningBoard</a>
+
+      <button type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+
+      <nav id="primary-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse Experiences</a></li>
+          <li><a href="share.html">Share Your Learning</a></li>
+          <li><a href="skills-guide.html" aria-current="page">Skills Guide</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="hero" aria-labelledby="hero-title">
+
+    <!-- Intro -->
+    <section aria-labelledby="hero-title">
       <h1 id="hero-title">Skills Guide</h1>
       <p>Use this page to explore practical, project-led learning paths for popular skills. Each skill includes what it is, why it matters, prerequisites, step-by-step build guidance, project ideas, resources, and next steps.</p>
     </section>
 
-    <aside aria-labelledby="skills-list-title">
-      <h2 id="skills-list-title">Skills</h2>
-      <nav aria-label="Skills navigation">
-        <ul>
-          <li><a href="#web-dev">Web Development</a></li>
-          <li><a href="#data-science">Data Science</a></li>
-          <li><a href="#machine-learning">Machine Learning</a></li>
-          <li><a href="#devops">DevOps</a></li>
-          <li><a href="#ui-ux">UI / UX Design</a></li>
-          <li><a href="#mobile-dev">Mobile Development</a></li>
-          <li><a href="#cloud">Cloud Computing</a></li>
-          <li><a href="#cybersecurity">Cybersecurity</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Template for each skill section follows the same structure -->
-    <section id="web-dev" aria-labelledby="web-dev-title">
-      <h2 id="web-dev-title">Web Development</h2>
-
-      <h3>What it is</h3>
-      <p>Building interactive websites and web applications using HTML, CSS, and JavaScript plus backend services.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Every public-facing product, SaaS platform, e-commerce site, and many internal tools are web-based. Skills transfer across frameworks and languages.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Basic HTML and semantic markup</li>
-        <li>Familiarity with the command line and Git</li>
-        <li>Comfort with JavaScript fundamentals</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Start with static HTML pages and semantic structure.</li>
-        <li>Add styles with CSS and learn responsive layout concepts.</li>
-        <li>Introduce JavaScript for interactivity (DOM, events, fetch).</li>
-        <li>Build a tiny backend (Node/Express, Flask or similar) and connect front-end to APIs.</li>
-        <li>Learn a front-end framework (React/Vue/Angular) by building a CRUD app.</li>
-        <li>Deploy a full stack project to a hosting provider (Netlify, Vercel, DigitalOcean, etc.).</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Personal portfolio website with a blog</li>
-        <li>Task manager with create/read/update/delete tasks</li>
-        <li>Simple e-commerce demo (product listing + cart)</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li>Official docs and tutorials (MDN Web Docs)</li>
-        <li>Free hands-on courses and bootcamp projects</li>
-        <li>API docs for the backend language of choice</li>
-      </ul>
-
-      <h3>Common pitfalls</h3>
-      <ul>
-        <li>Skipping responsive design and accessibility</li>
-        <li>Over-engineering early — keep first projects simple</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Deploy a project, get feedback, add tests, and optimize for performance and accessibility.</p>
-    </section>
-
-    <section id="data-science" aria-labelledby="data-science-title">
-      <h2 id="data-science-title">Data Science</h2>
-
-      <h3>What it is</h3>
-      <p>Collecting, cleaning, analyzing and visualizing data to extract insights and inform decisions.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Used in business intelligence, product analytics, research, and data-driven decision-making across industries.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Basic statistics and probability</li>
-        <li>Comfort with Python (pandas, numpy) or R</li>
-        <li>Familiarity with data visualization concepts</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Learn data wrangling with pandas (or dplyr in R).</li>
-        <li>Practice cleaning and exploratory data analysis (EDA) on public datasets.</li>
-        <li>Visualize findings using matplotlib/Seaborn or ggplot2.</li>
-        <li>Introduce statistical modeling and hypothesis testing.</li>
-        <li>Serve analyses as reports or dashboards (Jupyter, Streamlit, or Power BI).</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Sales dashboard for sample retail data</li>
-        <li>EDA report on a public dataset (Kaggle)</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li>Introductory statistics textbooks and online courses</li>
-        <li>Kaggle datasets and notebooks</li>
-      </ul>
-
-      <h3>Common pitfalls</h3>
-      <ul>
-        <li>Relying on unclean data</li>
-        <li>Confusing correlation with causation</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Create a reproducible notebook and a short presentation summarizing findings.</p>
-    </section>
-
-    <section id="machine-learning" aria-labelledby="ml-title">
-      <h2 id="ml-title">Machine Learning</h2>
-
-      <h3>What it is</h3>
-      <p>Training models to make predictions or discover structures in data using algorithms and statistical methods.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Recommendation systems, image recognition, NLP, forecasting, and automation benefit from ML models.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Solid Python skills and basic linear algebra</li>
-        <li>Statistics and probability</li>
-        <li>Familiarity with data pipelining and feature engineering</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Understand supervised vs unsupervised learning.</li>
-        <li>Start with simple models (linear/logistic regression, decision trees).</li>
-        <li>Work through model evaluation, cross-validation, and hyperparameter tuning.</li>
-        <li>Learn deep learning basics if relevant (neural networks with TensorFlow/PyTorch).</li>
-        <li>Package a model and create an API or demo app to showcase it.</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Spam classifier for emails</li>
-        <li>Image classifier trained on a small dataset</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li>Open courses (Andrew Ng), official library tutorials (scikit-learn, TensorFlow)</li>
-      </ul>
-
-      <h3>Common pitfalls</h3>
-      <ul>
-        <li>Data leakage</li>
-        <li>Insufficient evaluation and overfitting</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Deliver a trained model, evaluation report, and a short demo app.</p>
-    </section>
-
-    <section id="devops" aria-labelledby="devops-title">
-      <h2 id="devops-title">DevOps</h2>
-
-      <h3>What it is</h3>
-      <p>Practices that combine software development and IT operations to shorten delivery cycles and increase reliability.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Automates testing, building, and deploying software; used heavily in production-heavy engineering teams.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Familiarity with source control (Git)</li>
-        <li>Comfort with Linux basics and the command line</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Learn containerization (Docker).</li>
-        <li>Practice CI/CD pipelines (GitHub Actions, GitLab CI).</li>
-        <li>Explore infrastructure as code (Terraform) and configuration management (Ansible).</li>
-        <li>Monitor and log applications (Prometheus, Grafana, ELK stack).</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Containerize a small service and create a CI workflow to build and deploy it</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li>Official Docker docs, CI/CD provider docs, and cloud provider tutorials</li>
-      </ul>
-
-      <h3>Common pitfalls</h3>
-      <ul>
-        <li>Overcomplicating pipelines early</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Automate deployment of a demo app and add basic monitoring/alerts.</p>
-    </section>
-
-    <section id="ui-ux" aria-labelledby="uiux-title">
-      <h2 id="uiux-title">UI / UX Design</h2>
-
-      <h3>What it is</h3>
-      <p>Designing user interfaces and optimizing the overall user experience through research, prototyping, and testing.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Good UX drives engagement, retention, and conversion across digital products.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Basic visual design sense</li>
-        <li>Willingness to run user interviews and tests</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Learn design principles (contrast, hierarchy, spacing).</li>
-        <li>Sketch flows and low-fidelity wireframes.</li>
-        <li>Create interactive prototypes (Figma, Adobe XD) and run usability tests.</li>
-        <li>Iterate from feedback and document design decisions.</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Redesign a simple app flow and validate with 3–5 users</li>
-      </ul>
-
-      <h3>Resources</h3>
-      <ul>
-        <li>Design systems guides, usability testing playbooks</li>
-      </ul>
-
-      <h3>Common pitfalls</h3>
-      <ul>
-        <li>Designing without user validation</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Deliver a prototype and a short usability report with key findings.</p>
-    </section>
-
-    <section id="mobile-dev" aria-labelledby="mobile-title">
-      <h2 id="mobile-title">Mobile Development</h2>
-
-      <h3>What it is</h3>
-      <p>Building native or cross-platform mobile apps for iOS and Android.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Mobile-first experiences for consumers and enterprise users, location-aware services, and offline-first apps.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Programming fundamentals (Kotlin/Swift for native, or JavaScript/TypeScript for cross-platform)</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Start with simple screens and navigation patterns.</li>
-        <li>Learn native patterns or a cross-platform framework (React Native, Flutter).</li>
-        <li>Implement state management and native integrations (camera, storage).</li>
-        <li>Test on devices and set up app store deployment pipelines.</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Note-taking app with offline sync</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Ship a small app to a device and share a test build.</p>
-    </section>
-
-    <section id="cloud" aria-labelledby="cloud-title">
-      <h2 id="cloud-title">Cloud Computing</h2>
-
-      <h3>What it is</h3>
-      <p>Using remote infrastructure and managed services (compute, storage, networking) to run applications at scale.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Most modern services rely on cloud providers for scalability, reliability, and managed operations.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Familiarity with networking basics and Linux</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Learn core services: compute, storage, networking, IAM.</li>
-        <li>Deploy sample applications to a cloud provider (AWS, GCP, Azure).</li>
-        <li>Use managed services (databases, queues) and learn cost/monitoring basics.</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Deploy a web app with a managed database and a simple backup strategy</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Build and document a small, secure production-like deployment.</p>
-    </section>
-
-    <section id="cybersecurity" aria-labelledby="security-title">
-      <h2 id="security-title">Cybersecurity</h2>
-
-      <h3>What it is</h3>
-      <p>Protecting systems, networks, and data from digital attacks by identifying vulnerabilities and applying defenses.</p>
-
-      <h3>Why it matters / Where it's used</h3>
-      <p>Security underpins trust for any product that stores or processes user data.</p>
-
-      <h3>Prerequisites</h3>
-      <ul>
-        <li>Basic networking and system knowledge</li>
-        <li>Familiarity with authentication and encryption concepts</li>
-      </ul>
-
-      <h3>How to build (step-by-step)</h3>
-      <ol>
-        <li>Learn common vulnerabilities (OWASP Top 10).</li>
-        <li>Practice secure coding and threat modeling.</li>
-        <li>Use scanners and run controlled penetration tests on test environments.</li>
-      </ol>
-
-      <h3>Example projects</h3>
-      <ul>
-        <li>Audit a small web app for common security issues and fix them</li>
-      </ul>
-
-      <h3>Next steps / Assessment</h3>
-      <p>Deliver a short security audit and remediation plan for a demo app.</p>
-    </section>
-
-    <section id="wrap-up" aria-labelledby="wrap-title">
-      <h2 id="wrap-title">How to use this guide</h2>
-      <p>Pick one skill and finish a small project end-to-end. Keep iterations short, document decisions, and seek feedback. Track progress with milestones (learn, build, deploy, share).</p>
-    </section>
+    <!-- Two-column layout: sidebar nav + skill sections -->
+    <div class="skills-layout">
+
+      <!-- Sidebar navigation -->
+      <aside class="skills-nav" aria-labelledby="skills-list-title">
+        <h2 id="skills-list-title">Skills</h2>
+        <nav aria-label="Skills navigation">
+          <ul>
+            <li><a href="#web-dev">Web Development</a></li>
+            <li><a href="#data-science">Data Science</a></li>
+            <li><a href="#machine-learning">Machine Learning</a></li>
+            <li><a href="#devops">DevOps</a></li>
+            <li><a href="#ui-ux">UI / UX Design</a></li>
+            <li><a href="#mobile-dev">Mobile Development</a></li>
+            <li><a href="#cloud">Cloud Computing</a></li>
+            <li><a href="#cybersecurity">Cybersecurity</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Skill sections -->
+      <div class="skills-content">
+
+        <section id="web-dev" class="skill-section" aria-labelledby="web-dev-title">
+          <h2 id="web-dev-title">Web Development</h2>
+
+          <h3>What it is</h3>
+          <p>Building interactive websites and web applications using HTML, CSS, and JavaScript plus backend services.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Every public-facing product, SaaS platform, e-commerce site, and many internal tools are web-based. Skills transfer across frameworks and languages.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Basic HTML and semantic markup</li>
+            <li>Familiarity with the command line and Git</li>
+            <li>Comfort with JavaScript fundamentals</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Start with static HTML pages and semantic structure.</li>
+            <li>Add styles with CSS and learn responsive layout concepts.</li>
+            <li>Introduce JavaScript for interactivity (DOM, events, fetch).</li>
+            <li>Build a tiny backend (Node/Express, Flask or similar) and connect front-end to APIs.</li>
+            <li>Learn a front-end framework (React/Vue/Angular) by building a CRUD app.</li>
+            <li>Deploy a full stack project to a hosting provider (Netlify, Vercel, DigitalOcean, etc.).</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Personal portfolio website with a blog</li>
+            <li>Task manager with create/read/update/delete tasks</li>
+            <li>Simple e-commerce demo (product listing + cart)</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li>Official docs and tutorials (MDN Web Docs)</li>
+            <li>Free hands-on courses and bootcamp projects</li>
+            <li>API docs for the backend language of choice</li>
+          </ul>
+
+          <h3>Common pitfalls</h3>
+          <ul>
+            <li>Skipping responsive design and accessibility</li>
+            <li>Over-engineering early — keep first projects simple</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Deploy a project, get feedback, add tests, and optimize for performance and accessibility.</p>
+        </section>
+
+        <section id="data-science" class="skill-section" aria-labelledby="data-science-title">
+          <h2 id="data-science-title">Data Science</h2>
+
+          <h3>What it is</h3>
+          <p>Collecting, cleaning, analyzing and visualizing data to extract insights and inform decisions.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Used in business intelligence, product analytics, research, and data-driven decision-making across industries.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Basic statistics and probability</li>
+            <li>Comfort with Python (pandas, numpy) or R</li>
+            <li>Familiarity with data visualization concepts</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Learn data wrangling with pandas (or dplyr in R).</li>
+            <li>Practice cleaning and exploratory data analysis (EDA) on public datasets.</li>
+            <li>Visualize findings using matplotlib/Seaborn or ggplot2.</li>
+            <li>Introduce statistical modeling and hypothesis testing.</li>
+            <li>Serve analyses as reports or dashboards (Jupyter, Streamlit, or Power BI).</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Sales dashboard for sample retail data</li>
+            <li>EDA report on a public dataset (Kaggle)</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li>Introductory statistics textbooks and online courses</li>
+            <li>Kaggle datasets and notebooks</li>
+          </ul>
+
+          <h3>Common pitfalls</h3>
+          <ul>
+            <li>Relying on unclean data</li>
+            <li>Confusing correlation with causation</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Create a reproducible notebook and a short presentation summarizing findings.</p>
+        </section>
+
+        <section id="machine-learning" class="skill-section" aria-labelledby="ml-title">
+          <h2 id="ml-title">Machine Learning</h2>
+
+          <h3>What it is</h3>
+          <p>Training models to make predictions or discover structures in data using algorithms and statistical methods.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Recommendation systems, image recognition, NLP, forecasting, and automation benefit from ML models.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Solid Python skills and basic linear algebra</li>
+            <li>Statistics and probability</li>
+            <li>Familiarity with data pipelining and feature engineering</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Understand supervised vs unsupervised learning.</li>
+            <li>Start with simple models (linear/logistic regression, decision trees).</li>
+            <li>Work through model evaluation, cross-validation, and hyperparameter tuning.</li>
+            <li>Learn deep learning basics if relevant (neural networks with TensorFlow/PyTorch).</li>
+            <li>Package a model and create an API or demo app to showcase it.</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Spam classifier for emails</li>
+            <li>Image classifier trained on a small dataset</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li>Open courses (Andrew Ng), official library tutorials (scikit-learn, TensorFlow)</li>
+          </ul>
+
+          <h3>Common pitfalls</h3>
+          <ul>
+            <li>Data leakage</li>
+            <li>Insufficient evaluation and overfitting</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Deliver a trained model, evaluation report, and a short demo app.</p>
+        </section>
+
+        <section id="devops" class="skill-section" aria-labelledby="devops-title">
+          <h2 id="devops-title">DevOps</h2>
+
+          <h3>What it is</h3>
+          <p>Practices that combine software development and IT operations to shorten delivery cycles and increase reliability.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Automates testing, building, and deploying software; used heavily in production-heavy engineering teams.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Familiarity with source control (Git)</li>
+            <li>Comfort with Linux basics and the command line</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Learn containerization (Docker).</li>
+            <li>Practice CI/CD pipelines (GitHub Actions, GitLab CI).</li>
+            <li>Explore infrastructure as code (Terraform) and configuration management (Ansible).</li>
+            <li>Monitor and log applications (Prometheus, Grafana, ELK stack).</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Containerize a small service and create a CI workflow to build and deploy it</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li>Official Docker docs, CI/CD provider docs, and cloud provider tutorials</li>
+          </ul>
+
+          <h3>Common pitfalls</h3>
+          <ul>
+            <li>Overcomplicating pipelines early</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Automate deployment of a demo app and add basic monitoring/alerts.</p>
+        </section>
+
+        <section id="ui-ux" class="skill-section" aria-labelledby="uiux-title">
+          <h2 id="uiux-title">UI / UX Design</h2>
+
+          <h3>What it is</h3>
+          <p>Designing user interfaces and optimizing the overall user experience through research, prototyping, and testing.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Good UX drives engagement, retention, and conversion across digital products.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Basic visual design sense</li>
+            <li>Willingness to run user interviews and tests</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Learn design principles (contrast, hierarchy, spacing).</li>
+            <li>Sketch flows and low-fidelity wireframes.</li>
+            <li>Create interactive prototypes (Figma, Adobe XD) and run usability tests.</li>
+            <li>Iterate from feedback and document design decisions.</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Redesign a simple app flow and validate with 3–5 users</li>
+          </ul>
+
+          <h3>Resources</h3>
+          <ul>
+            <li>Design systems guides, usability testing playbooks</li>
+          </ul>
+
+          <h3>Common pitfalls</h3>
+          <ul>
+            <li>Designing without user validation</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Deliver a prototype and a short usability report with key findings.</p>
+        </section>
+
+        <section id="mobile-dev" class="skill-section" aria-labelledby="mobile-title">
+          <h2 id="mobile-title">Mobile Development</h2>
+
+          <h3>What it is</h3>
+          <p>Building native or cross-platform mobile apps for iOS and Android.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Mobile-first experiences for consumers and enterprise users, location-aware services, and offline-first apps.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Programming fundamentals (Kotlin/Swift for native, or JavaScript/TypeScript for cross-platform)</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Start with simple screens and navigation patterns.</li>
+            <li>Learn native patterns or a cross-platform framework (React Native, Flutter).</li>
+            <li>Implement state management and native integrations (camera, storage).</li>
+            <li>Test on devices and set up app store deployment pipelines.</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Note-taking app with offline sync</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Ship a small app to a device and share a test build.</p>
+        </section>
+
+        <section id="cloud" class="skill-section" aria-labelledby="cloud-title">
+          <h2 id="cloud-title">Cloud Computing</h2>
+
+          <h3>What it is</h3>
+          <p>Using remote infrastructure and managed services (compute, storage, networking) to run applications at scale.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Most modern services rely on cloud providers for scalability, reliability, and managed operations.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Familiarity with networking basics and Linux</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Learn core services: compute, storage, networking, IAM.</li>
+            <li>Deploy sample applications to a cloud provider (AWS, GCP, Azure).</li>
+            <li>Use managed services (databases, queues) and learn cost/monitoring basics.</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Deploy a web app with a managed database and a simple backup strategy</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Build and document a small, secure production-like deployment.</p>
+        </section>
+
+        <section id="cybersecurity" class="skill-section" aria-labelledby="security-title">
+          <h2 id="security-title">Cybersecurity</h2>
+
+          <h3>What it is</h3>
+          <p>Protecting systems, networks, and data from digital attacks by identifying vulnerabilities and applying defenses.</p>
+
+          <h3>Why it matters / Where it's used</h3>
+          <p>Security underpins trust for any product that stores or processes user data.</p>
+
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Basic networking and system knowledge</li>
+            <li>Familiarity with authentication and encryption concepts</li>
+          </ul>
+
+          <h3>How to build (step-by-step)</h3>
+          <ol>
+            <li>Learn common vulnerabilities (OWASP Top 10).</li>
+            <li>Practice secure coding and threat modeling.</li>
+            <li>Use scanners and run controlled penetration tests on test environments.</li>
+          </ol>
+
+          <h3>Example projects</h3>
+          <ul>
+            <li>Audit a small web app for common security issues and fix them</li>
+          </ul>
+
+          <h3>Next steps / Assessment</h3>
+          <p>Deliver a short security audit and remediation plan for a demo app.</p>
+        </section>
+
+        <section id="wrap-up" class="skill-section" aria-labelledby="wrap-title">
+          <h2 id="wrap-title">How to use this guide</h2>
+          <p>Pick one skill and finish a small project end-to-end. Keep iterations short, document decisions, and seek feedback. Track progress with milestones (learn, build, deploy, share).</p>
+        </section>
+
+      </div><!-- end .skills-content -->
+    </div><!-- end .skills-layout -->
+
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© Learning Board — concise skill roadmaps and project ideas.</p>
+    <div class="footer-columns">
+      <div>
+        <h4>LearningBoard</h4>
+        <p>Share workplace insights. Learn from peers. Grow your career.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="skills-guide.html">Skills Guide</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="contact.html">Send Feedback</a></li>
+          <li><a href="faq.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
+    </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
