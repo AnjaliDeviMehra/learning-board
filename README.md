@@ -27,6 +27,22 @@ Students who have workplace experience (part-time jobs, internships, co-op place
 
 
 
+## Phase 2 – CSS Styling and Responsive Design
+
+- Added a single shared stylesheet (`css/styles.css`) linked to all pages
+- Established a consistent green colour scheme (`#1b5e3b`, `#2d7a4f`, `#e8f5ee`) across all pages
+- Styled the header, navigation bar, and footer consistently site-wide
+- Added responsive navigation with a hamburger menu button for mobile screens
+- Styled form elements: fieldsets, legends, labels, text inputs, selects, textareas, radio buttons, checkboxes, and submit/reset buttons (`share.html`, `contact.html`)
+- Added focus states on all form inputs for keyboard accessibility
+- Styled the About page logo and category tags as pill-shaped badges
+- Added a two-column flex layout on the Skills Guide page (sticky sidebar navigation + main content area)
+- Styled each skill section with a top border, heading hierarchy, and sub-section labels
+- Styled `<aside>` elements with a left-border callout design
+- Applied flexbox and CSS Grid for responsive layouts across pages
+- Added media queries for tablet and mobile: single-column layout, stacked buttons, static sidebar
+- Fixed header and footer structure on `skills-guide.html` to match all other pages
+
 ## GitHub Pages link
 
 https://anjalidevimehra.github.io/learning-board/

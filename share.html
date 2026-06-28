@@ -67,7 +67,7 @@
                 <fieldset>
                     <legend>About You</legend>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-name">Display Name <span aria-hidden="true">*</span></label>
                         <input
                             type="text"
@@ -81,7 +81,7 @@
                         <small>This is the name shown on your post. You can use a nickname or initials.</small>
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-email">Email Address <span aria-hidden="true">*</span></label>
                         <input
                             type="email"
@@ -99,7 +99,7 @@
                 <fieldset>
                     <legend>Your Work Experience</legend>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-role">Job Title or Role <span aria-hidden="true">*</span></label>
                         <input
                             type="text"
@@ -111,7 +111,7 @@
                         >
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-company">Company or Organization <span aria-hidden="true">*</span></label>
                         <input
                             type="text"
@@ -123,7 +123,7 @@
                         >
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-duration">How long was your placement?</label>
                         <select id="share-duration" name="duration">
                             <option value="">— Select duration —</option>
@@ -140,7 +140,7 @@
                 <fieldset>
                     <legend>Your Post</legend>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-title">Post Title <span aria-hidden="true">*</span></label>
                         <input
                             type="text"
@@ -153,7 +153,7 @@
                         >
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-category">Skill Category <span aria-hidden="true">*</span></label>
                         <select id="share-category" name="category" required>
                             <option value="">— Select a category —</option>
@@ -164,7 +164,7 @@
                         </select>
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <label for="share-body">Your Experience <span aria-hidden="true">*</span></label>
                         <textarea
                             id="share-body"
@@ -178,14 +178,14 @@
                         <small>Minimum 50 characters. Try to be specific so readers can apply your advice.</small>
                     </div>
 
-                    <div>
+                    <div class="form-group">
                         <span id="share-type-label">Post Type <span aria-hidden="true">*</span></span>
-                        <div role="radiogroup" aria-labelledby="share-type-label">
-                            <div>
+                        <div class="radio-group" role="radiogroup" aria-labelledby="share-type-label">
+                            <div class="radio-option">
                                 <input type="radio" id="type-experience" name="post-type" value="experience" required checked>
                                 <label for="type-experience">Experience — A short workplace lesson or tip</label>
                             </div>
-                            <div>
+                            <div class="radio-option">
                                 <input type="radio" id="type-story" name="post-type" value="story">
                                 <label for="type-story">Success Story — A longer narrative about growth or achievement</label>
                             </div>
@@ -197,7 +197,7 @@
                 <fieldset>
                     <legend>Review and Submit</legend>
 
-                    <div>
+                    <div class="form-group checkbox-group">
                         <input type="checkbox" id="share-agree" name="agree" required>
                         <label for="share-agree">
                             I confirm that this post is my own writing, does not contain
@@ -206,9 +206,9 @@
                         </label>
                     </div>
 
-                    <div>
-                        <button type="submit">Submit Post</button>
-                        <button type="reset">Clear Form</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Submit Post</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
                     </div>
 
                     <p><small>Fields marked with <span aria-hidden="true">*</span> are required.</small></p>
@@ -232,7 +232,7 @@
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <div>
+        <div class="footer-columns">
             <div>
                 <h4>LearningBoard</h4>
                 <p>Share workplace insights. Learn from peers. Grow your career.</p>
@@ -255,7 +255,7 @@
                 </ul>
             </div>
         </div>
-        <div>
+        <div class="footer-bottom">
             <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
         </div>
     </footer>
