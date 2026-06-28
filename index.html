@@ -6,18 +6,23 @@
     <title>LearningBoard – Share Work Insights with Fellow Students</title>
     <meta name="description" content="LearningBoard: A platform for students to share workplace experiences and success stories. Learn from real work insights in communication, tech skills, teamwork, and problem-solving.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
         <div>
             <a href="index.html">
-                <img src="image-files/logo.png" alt="LearningBoard logo" width="40" height="40">
-                <span>LearningBoard</span>
+                <img src="image-files/logo.svg" alt="LearningBoard logo">
             </a>
+
+             <button type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <i class="bi bi-list"></i>
+            </button>
 
             <nav id="primary-menu" aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="browse.html">Browse Experiences</a></li>
                     <li><a href="share.html">Share Your Learning</a></li>
                     <li><a href="skills-guide.html">Skills Guide</a></li>
@@ -31,8 +36,8 @@
 
 
     <main>
-        <section>
-            <div>
+        <section class="hero">
+            <div class="hero-content">
                 <h1>Learn from Real Student Work Experiences</h1>
                 <p>
                     Discover practical insights from internships, part-time jobs, and co-op placements.
@@ -42,14 +47,14 @@
                     Join a community of students sharing real workplace lessons in Communication, Tech Skills,
                     Teamwork, and Problem Solving. No textbook theory—just honest, actionable insights.
                 </p>
-                <div>
-                    <a href="share.html">Share Your Learning</a>
-                    <a href="browse.html">Browse Experiences</a>
+                <div class="hero-links">
+                    <a href="share.html" class="btn-secondary">Share Your Learning</a>
+                    <a href="browse.html" class="btn-secondary">Browse Experiences</a>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="stats-bar">
             <div>
                 <h2>200+</h2>
                 <p>Learning Posts</p>
@@ -68,156 +73,182 @@
             </div>
         </section>
 
-        <div>
-            <h2>Featured Experiences</h2>
-            <div>
-                    <section>
-                    <div>
-                        <h2>Recent Experiences</h2>
-                        <a href="browse.html">View all →</a>
-                    </div>
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse</h3>
+                    <p>Explore real posts from students across internships, co-ops, and part-time jobs.</p>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Learn</h3>
+                    <p>Pick up practical tips in Communication, Tech Skills, Teamwork, and Problem Solving.</p>
+                </div>
+                <div class="step-divider"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Share</h3>
+                    <p>Post your own workplace experience and help the next student grow.</p>
+                </div>
+            </div>
+        </section>
 
-                    <div>
-                        <!-- Experience Post 1 -->
-                        <article data-type="experience" data-category="communication">
-                            <div>
+        <div class="recent-experiences">
+            <section>
+                <div class="section-header">
+                    <h2>Recent Experiences</h2>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Experience Post 1 -->
+                    <article data-type="experience" data-category="communication">
+                        <div class="card-top">
+                            <div class="card-author">
+                                <div class="avatar">V</div>
                                 <div>
-                                    <div>V</div>
-                                    <div>
-                                        <h3>Vardan Abrol</h3>
-                                        <p>Software Developer Intern at TechCorp • 2 days ago</p>
-                                    </div>
-                                </div>
-                                <span>Experience</span>
-                            </div>
-
-                            <div>
-                                <h3>How to Present Technical Ideas to Non-Technical Stakeholders</h3>
-                                <p>
-                                    During my internship, I learned that technical jargon is the enemy of communication.
-                                    The best tip I picked up: always explain the "why" before the "how". When I had to present
-                                    our new API architecture to the product team, I started by explaining the business problem
-                                    we were solving, then the solution. Everyone understood and supported it! Now I always structure
-                                    my presentations this way.
-                                </p>
-                                <div>
-                                    <span>💬 Communication</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <button type="button" aria-label="Mark as helpful">👍 Helpful (34)</button>
-                                <button type="button" aria-label="Share post">💬 Comment (5)</button>
-                                <button type="button" aria-label="Save post">🔖 Save</button>
-                            </div>
-                        </article>
-
-                        <!-- Experience Post 2 -->
-                        <article data-type="experience" data-category="tech">
-                            <div>
-                                <div>
-                                    <div>A</div>
-                                    <div>
-                                        <h3>Anjali</h3>
-                                        <p>Data Analytics Co-op at DataFlow Inc • 5 days ago</p>
-                                    </div>
-                                </div>
-                                <span>Experience</span>
-                            </div>
-
-                            <div>
-                                <h3>SQL Query Optimization: Simple Tricks That Saved Hours</h3>
-                                <p>
-                                    I used to write inefficient SQL queries that made our analytics reports run for 10+ minutes.
-                                    My mentor showed me how to use EXPLAIN PLAN to analyze queries and add proper indexes. Now
-                                    the same reports run in seconds. Key takeaway: always think about database performance from
-                                    day one, not as an afterthought. It's not as hard as it seems!
-                                </p>
-                                <div>
-                                    <span>💻 Tech Skills</span>
+                                    <h3>Vardan Abrol</h3>
+                                    <p>Software Developer Intern at TechCorp • 2 days ago</p>
                                 </div>
                             </div>
+                            <span class="badge">Experience</span>
+                        </div>
 
-                            <div>
-                                <button type="button" aria-label="Mark as helpful">👍 Helpful (52)</button>
-                                <button type="button" aria-label="Share post">💬 Comment (8)</button>
-                                <button type="button" aria-label="Save post">🔖 Save</button>
+                        <div class="card-body">
+                            <h3>How to Present Technical Ideas to Non-Technical Stakeholders</h3>
+                            <p>
+                                During my internship, I learned that technical jargon is the enemy of communication.
+                                The best tip I picked up: always explain the "why" before the "how". When I had to present
+                                our new API architecture to the product team, I started by explaining the business problem
+                                we were solving, then the solution. Everyone understood and supported it! Now I always structure
+                                my presentations this way.
+                            </p>
+                            <div class="tags">
+                                <span>💬 Communication</span>
                             </div>
-                        </article>
+                        </div>
 
-                        <!-- Experience Post 3 -->
-                        <article data-type="experience" data-category="teamwork">
-                            <div>
+                        <div class="card-actions">
+                            <button type="button" aria-label="Mark as helpful">👍 Helpful (34)</button>
+                            <button type="button" aria-label="Share post">💬 Comment (5)</button>
+                            <button type="button" aria-label="Save post">🔖 Save</button>
+                        </div>
+                    </article>
+
+                    <!-- Experience Post 2 -->
+                    <article data-type="experience" data-category="tech">
+                        <div class="card-top">
+                            <div class="card-author">
+                                <div class="avatar">A</div>
                                 <div>
-                                    <div>I</div>
-                                    <div>
-                                        <h3>Isa Din</h3>
-                                        <p>Project Manager Intern at BuildCo • 1 week ago</p>
-                                    </div>
+                                    <h3>Anjali</h3>
+                                    <p>Data Analytics Co-op at DataFlow Inc • 5 days ago</p>
                                 </div>
-                                <span>Experience</span>
                             </div>
+                            <span class="badge">Experience</span>
+                        </div>
 
-                            <div>
-                                <h3>Daily Standups Changed How Our Remote Team Communicates</h3>
-                                <p>
-                                    Our team was scattered across 3 time zones, and communication was a mess. When we started
-                                    doing 15-minute daily standups (same time each day), everything changed. Everyone knew what
-                                    others were working on, blockers were surfaced immediately, and we felt more connected.
-                                    I wish every remote team knew how valuable this simple ritual is.
-                                </p>
+                        <div class="card-body">
+                            <h3>SQL Query Optimization: Simple Tricks That Saved Hours</h3>
+                            <p>
+                                I used to write inefficient SQL queries that made our analytics reports run for 10+ minutes.
+                                My mentor showed me how to use EXPLAIN PLAN to analyze queries and add proper indexes. Now
+                                the same reports run in seconds. Key takeaway: always think about database performance from
+                                day one, not as an afterthought. It's not as hard as it seems!
+                            </p>
+                            <div class="tags">
+                                <span>💻 Tech Skills</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button type="button" aria-label="Mark as helpful">👍 Helpful (52)</button>
+                            <button type="button" aria-label="Share post">💬 Comment (8)</button>
+                            <button type="button" aria-label="Save post">🔖 Save</button>
+                        </div>
+                    </article>
+
+                    <!-- Experience Post 3 -->
+                    <article data-type="experience" data-category="teamwork">
+                        <div class="card-top">
+                            <div class="card-author">
+                                <div class="avatar">I</div>
                                 <div>
-                                    <span>👥 Teamwork</span>
+                                    <h3>Isa Din</h3>
+                                    <p>Project Manager Intern at BuildCo • 1 week ago</p>
                                 </div>
                             </div>
+                            <span class="badge">Experience</span>
+                        </div>
 
-                            <div>
-                                <button type="button" aria-label="Mark as helpful">👍 Helpful (28)</button>
-                                <button type="button" aria-label="Share post">💬 Comment (3)</button>
-                                <button type="button" aria-label="Save post">🔖 Save</button>
+                        <div class="card-body">
+                            <h3>Daily Standups Changed How Our Remote Team Communicates</h3>
+                            <p>
+                                Our team was scattered across 3 time zones, and communication was a mess. When we started
+                                doing 15-minute daily standups (same time each day), everything changed. Everyone knew what
+                                others were working on, blockers were surfaced immediately, and we felt more connected.
+                                I wish every remote team knew how valuable this simple ritual is.
+                            </p>
+                            <div class="tags">
+                                <span>👥 Teamwork</span>
                             </div>
-                        </article>
-                    </div>
+                        </div>
 
-                    <div>
-                        <a href="browse.html">Browse All Experiences</a>
-                    </div>
-                </section>
+                        <div class="card-actions">
+                            <button type="button" aria-label="Mark as helpful">👍 Helpful (28)</button>
+                            <button type="button" aria-label="Share post">💬 Comment (3)</button>
+                            <button type="button" aria-label="Save post">🔖 Save</button>
+                        </div>
+                    </article>
+                </div>
 
+                <div class="browse-all">
+                    <a href="browse.html">Browse All Experiences</a>
+                </div>
+            </section>
         </div>
-        </div>
+
+        <section class="cta-banner">
+            <div class="cta-banner-inner">
+                <h2>Have a workplace story to tell?</h2>
+                <p>Help other students by sharing what you learned on the job.</p>
+                <a href="share.html">Share Your Experience</a>
+            </div>
+        </section>
 
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-columns">
-            <div>
-                <h4>LearningBoard</h4>
-                <p>Share workplace insights. Learn from peers. Grow your career.</p>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="skills-guide.html">Skills Guide</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="credits.html">Credits</a></li>
-                    <li><a href="contact.html">Send Feedback</a></li>
-                    <li><a href="faq.html">Get Help</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
-        </div>
-    </footer>
+   <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>LearningBoard</h4>
+        <p>Share workplace insights. Learn from peers. Grow your career.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="skills-guide.html">Skills Guide</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="contact.html">Send Feedback</a></li>
+          <li><a href="faq.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
+    </div>
+  </footer>
 
     <script src="js/script.js"></script>
 </body>

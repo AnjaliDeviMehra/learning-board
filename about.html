@@ -6,15 +6,19 @@
     <title>About – LearningBoard</title>
     <meta name="description" content="Learn about LearningBoard, a student project built at York University.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
     <header>
         <div>
-            <a href="index.html">📚 LearningBoard</a>
+            <a href="index.html">
+                <img src="image-files/logo.svg" alt="LearningBoard logo" width="200" height="100">
+            </a>
 
             <button type="button" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation menu">
-                <span></span>
+                <i class="bi bi-list"></i>
             </button>
 
             <nav id="primary-menu" aria-label="Main navigation">
@@ -23,7 +27,7 @@
                     <li><a href="browse.html">Browse Experiences</a></li>
                     <li><a href="share.html">Share Your Learning</a></li>
                     <li><a href="skills-guide.html">Skills Guide</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -33,25 +37,43 @@
 
     <main>
 
-        <section>
+        <section class="page-hero">
+            <img src="image-files/logo.svg" alt="LearningBoard logo" class="hero-logo">
             <h1>About LearningBoard</h1>
-            <img src="image-files/logo.png" alt="LearningBoard logo" class="about-logo">
             <p>LearningBoard is a student project built for DIGT 1302 at York University. The idea is simple — students share something they learned at work, and other students can read it and mark it as helpful.</p>
             <p>We built this because a lot of useful workplace knowledge never gets shared. You learn something at your internship or part-time job and it just stays with you. This site is a place to put it so others can benefit too.</p>
         </section>
 
-        <section>
-            <h2>How it works</h2>
-            <ol>
-                <li>Share something you learned at work</li>
-                <li>Browse posts by category</li>
-                <li>Mark posts as helpful</li>
-            </ol>
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <ul class="mission-list">
+                <li>
+                    <span class="mission-icon">🎯</span>
+                    <div>
+                        <strong>Bridge the gap between school and work</strong>
+                        <p>Textbooks teach theory. Real jobs teach everything else. LearningBoard captures the lessons that only come from actually being there.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mission-icon">🤝</span>
+                    <div>
+                        <strong>Make peer knowledge accessible</strong>
+                        <p>The best advice often comes from someone one step ahead of you — not a professor or a manager, but another student who just figured it out.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="mission-icon">🌱</span>
+                    <div>
+                        <strong>Build a culture of sharing</strong>
+                        <p>Every post on LearningBoard is a student choosing to give back. We want that to become the norm, not the exception.</p>
+                    </div>
+                </li>
+            </ul>
         </section>
 
-        <section>
+        <section class="categories-section">
             <h2>Categories</h2>
-            <ul class="about-categories">
+            <ul class="category-pills">
                 <li>💬 Communication</li>
                 <li>💻 Tech Skills</li>
                 <li>👥 Teamwork</li>
@@ -59,9 +81,40 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Questions?</h2>
-            <p>Check the <a href="faq.html">FAQ</a> or <a href="contact.html">contact us</a>.</p>
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <p class="team-intro">Built by four students at York University for DIGT 1302 – Web Development Basics.</p>
+            <div class="team-grid">
+                <div class="member-card">
+                    <div class="avatar avatar-large">V</div>
+                    <h3>Vardan Abrol</h3>
+                </div>
+                <div class="member-card">
+                    <div class="avatar avatar-large">A</div>
+                    <h3>Anjali Devi</h3>
+                </div>
+                <div class="member-card">
+                    <div class="avatar avatar-large">I</div>
+                    <h3>Isa Din</h3>
+                </div>
+                <div class="member-card">
+                    <div class="avatar avatar-large">M</div>
+                    <h3>Mohammad</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="university-note">
+            <div class="university-callout">
+                <p>🎓 <strong>LearningBoard</strong> was created in 2026 as a capstone project for <strong>DIGT 1302 – Web Development Basics</strong> at <strong>York University</strong>. It is a student-run platform.</p>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="cta-banner-inner">
+                <h2>Questions?</h2>
+                <p>Check the <a href="faq.html">FAQ</a> or <a href="contact.html">contact us</a>.</p>
+            </div>
         </section>
 
     </main>
