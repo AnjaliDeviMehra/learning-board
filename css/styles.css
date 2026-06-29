@@ -814,28 +814,36 @@ main aside h2 {
     }
 }
 
-/* ===== Phase 2: Browse and Credits page styling ===== */
-
-/* Browse page article cards */
+/* Browse page article cards styled to match home page posts */
 .browse-page > section > article {
-    background-color: #ffffff;
-    border: 1px solid #d9e8df;
-    border-radius: 10px;
-    padding: 22px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(27, 94, 59, 0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .browse-page > section > article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(27, 94, 59, 0.14);
+    box-shadow: 0 4px 16px rgba(27, 94, 59, 0.1);
+    border-color: #1b5e3b;
 }
 
 .browse-page > section > article h3 {
+    font-size: 1rem;
     color: #1b5e3b;
-    margin-top: 0;
-    margin-bottom: 10px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.browse-page > section > article p {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .browse-page > section > article p strong {
