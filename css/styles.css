@@ -454,6 +454,38 @@ main aside h2 {
     margin-top: 0;
 }
 
+/* Form validation states */
+.form-group input.invalid,
+.form-group textarea.invalid,
+.form-group select.invalid {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.form-group input.valid,
+.form-group textarea.valid,
+.form-group select.valid {
+    border-color: #1b5e3b;
+}
+
+.field-error {
+    display: block;
+    color: #c0392b;
+    font-size: 0.82rem;
+    margin-top: 4px;
+}
+
+.form-success {
+    background-color: #e8f5ee;
+    border: 1px solid #1b5e3b;
+    color: #1b5e3b;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
 
