@@ -383,6 +383,7 @@ footer ul li a:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* ===== BUTTONS ===== */
 .btn-primary {
     display: inline-block;
     background-color: #1b5e3b;
@@ -425,6 +426,7 @@ footer ul li a:hover {
     text-decoration: none !important;
 }
 
+/* ===== FORMS ===== */
 fieldset {
     border: 1px solid #c8dfd0;
     border-radius: 8px;
@@ -542,6 +544,35 @@ legend {
     margin-bottom: 15px;
 }
 
+/* ===== ABOUT PAGE ===== */
+.about-logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.about-categories,
+.category-pills {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+}
+
+.about-categories li,
+.category-pills li {
+    background-color: #e8f5ee;
+    color: #1b5e3b;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #2d7a4f;
+    margin-bottom: 0;
+}
 
 .faq-section {
     max-width: 1100px;
@@ -597,6 +628,7 @@ legend {
     border-bottom: none;
 }
 
+/* ===== SKILLS GUIDE ===== */
 .skills-layout {
     display: flex;
     gap: 40px;
@@ -683,6 +715,39 @@ main aside {
 main aside h2 {
     margin-top: 0;
 }
+
+/* Form validation states */
+.form-group input.invalid,
+.form-group textarea.invalid,
+.form-group select.invalid {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.form-group input.valid,
+.form-group textarea.valid,
+.form-group select.valid {
+    border-color: #1b5e3b;
+}
+
+.field-error {
+    display: block;
+    color: #c0392b;
+    font-size: 0.82rem;
+    margin-top: 4px;
+}
+
+.form-success {
+    background-color: #e8f5ee;
+    border: 1px solid #1b5e3b;
+    color: #1b5e3b;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 
 /* Mobile responsive */
 @media (max-width: 768px) {
