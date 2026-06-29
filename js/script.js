@@ -1,15 +1,3 @@
-// LearningBoard – script.js
-
-// ===== MOBILE NAV TOGGLE =====
-const navButton = document.querySelector('header button[aria-controls="primary-menu"]');
-const navMenu = document.getElementById('primary-menu');
-
-if (navButton && navMenu) {
-    navButton.addEventListener('click', function () {
-        const isOpen = navMenu.classList.toggle('open');
-        navButton.setAttribute('aria-expanded', isOpen);
-    });
-}
 
 // ===== FORM VALIDATION HELPERS =====
 
