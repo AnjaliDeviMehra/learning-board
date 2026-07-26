@@ -1,4 +1,39 @@
 
+// ===== RECENT EXPERIENCES: HELPFUL / LIKE COUNTERS =====
+const STATS_STORAGE_KEY = 'learningboard_stats';
+
+function getStats() {
+    try {
+        return JSON.parse(localStorage.getItem(STATS_STORAGE_KEY)) || {};
+    } catch (e) {
+        return {};
+    }
+}
+
+function bumpStat(postId, field, baseValue) {
+    const stats = getStats();
+    const current = stats[postId] || {};
+    const newCount = (typeof current[field] === 'number' ? current[field] : (baseValue || 0)) + 1;
+    stats[postId] = Object.assign({}, current, { [field]: newCount });
+    localStorage.setItem(STATS_STORAGE_KEY, JSON.stringify(stats));
+    return newCount;
+}
+
+document.querySelectorAll('.card-actions [data-field]').forEach(function (btn) {
+    const postId = btn.closest('article').dataset.postId;
+    const field = btn.dataset.field;
+    const base = parseInt(btn.dataset.base, 10) || 0;
+    const stats = getStats();
+    const current = stats[postId] && typeof stats[postId][field] === 'number' ? stats[postId][field] : base;
+    const label = field === 'helpful' ? '👍 Helpful' : '❤️ Like';
+    btn.textContent = label + ' (' + current + ')';
+
+    btn.addEventListener('click', function () {
+        const newCount = bumpStat(postId, field, base);
+        btn.textContent = label + ' (' + newCount + ')';
+    });
+});
+
 // ===== FORM VALIDATION HELPERS =====
 
 function showError(field, message) {
@@ -22,6 +57,103 @@ function clearError(field) {
 
 function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// ===== SHARE FORM VALIDATION =====
+const shareForm = document.getElementById('share-form');
+
+if (shareForm) {
+    shareForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        const name     = document.getElementById('share-name');
+        const email    = document.getElementById('share-email');
+        const role     = document.getElementById('share-role');
+        const company  = document.getElementById('share-company');
+        const title    = document.getElementById('share-title');
+        const category = document.getElementById('share-category');
+        const body     = document.getElementById('share-body');
+        const agree    = document.getElementById('share-agree');
+
+        if (name.value.trim().length < 2) {
+            showError(name, 'Please enter a display name (at least 2 characters).');
+            valid = false;
+        } else { clearError(name); }
+
+        if (!isValidEmail(email.value.trim())) {
+            showError(email, 'Please enter a valid email address.');
+            valid = false;
+        } else { clearError(email); }
+
+        if (role.value.trim() === '') {
+            showError(role, 'Please enter your job title or role.');
+            valid = false;
+        } else { clearError(role); }
+
+        if (company.value.trim() === '') {
+            showError(company, 'Please enter your company or organization.');
+            valid = false;
+        } else { clearError(company); }
+
+        if (title.value.trim().length < 5) {
+            showError(title, 'Please enter a post title (at least 5 characters).');
+            valid = false;
+        } else { clearError(title); }
+
+        if (category.value === '') {
+            showError(category, 'Please select a skill category.');
+            valid = false;
+        } else { clearError(category); }
+
+        if (body.value.trim().length < 50) {
+            showError(body, 'Please write at least 50 characters describing your experience.');
+            valid = false;
+        } else { clearError(body); }
+
+        if (!agree.checked) {
+            showError(agree, 'You must check this box before submitting.');
+            valid = false;
+        } else { clearError(agree); }
+
+        if (valid) {
+            const postType = shareForm.querySelector('input[name="post-type"]:checked');
+
+            const post = {
+                id: 'user-' + Date.now(),
+                name: name.value.trim(),
+                role: role.value.trim(),
+                company: company.value.trim(),
+                category: category.value,
+                title: title.value.trim(),
+                body: body.value.trim(),
+                type: postType ? postType.value : 'experience',
+                helpful: 0,
+                like: 0,
+                date: new Date().toISOString()
+            };
+
+            let posts = [];
+            try {
+                posts = JSON.parse(localStorage.getItem('learningboard_posts')) || [];
+            } catch (e) {
+                posts = [];
+            }
+            posts.push(post);
+            localStorage.setItem('learningboard_posts', JSON.stringify(posts));
+
+            window.location.href = 'browse.html';
+        }
+    });
+
+    // Clear error as user types
+    shareForm.querySelectorAll('input, textarea, select').forEach(function (field) {
+        field.addEventListener('input', function () {
+            if (field.value.trim() !== '') {
+                clearError(field);
+            }
+        });
+    });
 }
 
 // ===== CONTACT FORM VALIDATION =====
