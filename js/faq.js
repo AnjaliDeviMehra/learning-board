@@ -84,10 +84,17 @@
 
     var total = pairs.length;
 
+    // Unique list of section wrappers that contain FAQ pairs.
+    var sections = [];
+    pairs.forEach(function (pair) {
+        if (pair.section && sections.indexOf(pair.section) === -1) {
+            sections.push(pair.section);
+        }
+    });
+
     function runSearch() {
         var query = input.value.trim().toLowerCase();
         var shown = 0;
-        var sections = {};
 
         pairs.forEach(function (pair) {
             var match = query === '' || pair.text.indexOf(query) !== -1;
@@ -99,17 +106,12 @@
                 pair.dd.hidden = pair.dt.getAttribute('aria-expanded') !== 'true';
             }
             if (match) shown += 1;
-
-            if (pair.section) {
-                var key = pair.section.id || (pair.section.id = 'faq-section-auto');
-                sections[key] = sections[key] || { el: pair.section, any: false };
-                if (match) sections[key].any = true;
-            }
         });
 
         // Hide section wrappers with no visible questions.
-        Object.keys(sections).forEach(function (key) {
-            sections[key].el.hidden = !sections[key].any;
+        sections.forEach(function (section) {
+            var hasVisible = section.querySelector('.faq-card dt:not([hidden])') !== null;
+            section.hidden = !hasVisible;
         });
 
         // Update the live count and no-results message.
