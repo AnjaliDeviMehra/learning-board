@@ -628,6 +628,12 @@ legend {
     border-bottom: none;
 }
 
+/* `display: flex` above outranks the browser default [hidden] rule, so
+   filtered-out questions must be hidden explicitly (FAQ keyword search). */
+.faq-card dt[hidden] {
+    display: none;
+}
+
 /* ===== SKILLS GUIDE ===== */
 .skills-layout {
     display: flex;
