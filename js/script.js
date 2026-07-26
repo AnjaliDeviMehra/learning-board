@@ -143,3 +143,61 @@ if (contactForm && !document.getElementById('share-form')) {
         });
     });
 }
+
+// ===== DYNAMIC FOOTER YEAR =====
+document.querySelectorAll('.footer-year').forEach(function(el) {
+    el.textContent = new Date().getFullYear();
+});
+
+// ===== BACK TO TOP BUTTON =====
+var backToTop = document.createElement('button');
+backToTop.id = 'back-to-top';
+backToTop.textContent = '↑ Top';
+document.body.appendChild(backToTop);
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== CATEGORY PILLS (about.html) =====
+var categoryDescriptions = {
+    'communication': 'Tips and lessons about workplace communication — emails, meetings, presentations, and talking to coworkers or managers.',
+    'tech': 'Advice about tools, coding, data, software, and solving technical problems on the job.',
+    'teamwork': 'Lessons about working with others, collaborating across teams, asking for help, and supporting your coworkers.',
+    'problem-solving': 'Examples of how students handled mistakes, pressure, and difficult tasks at work — and what they learned from it.'
+};
+
+var categoryPills = document.querySelectorAll('.category-pills li');
+var categoryInfo = document.getElementById('category-info');
+
+if (categoryPills.length > 0 && categoryInfo) {
+    categoryPills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+            var key = pill.getAttribute('data-category');
+
+            // If clicking the already active pill, close it
+            if (pill.classList.contains('active')) {
+                pill.classList.remove('active');
+                categoryInfo.style.display = 'none';
+                categoryInfo.textContent = '';
+                return;
+            }
+
+            // Remove active from all pills
+            categoryPills.forEach(function(p) { p.classList.remove('active'); });
+
+            // Set active and show description
+            pill.classList.add('active');
+            categoryInfo.textContent = categoryDescriptions[key];
+            categoryInfo.style.display = 'block';
+        });
+    });
+}
