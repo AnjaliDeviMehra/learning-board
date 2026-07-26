@@ -44,6 +44,21 @@
                 Find answers to common questions about using LearningBoard. If your question
                 isn't listed here, feel free to <a href="contact.html">contact us</a>.
             </p>
+
+            <div class="faq-search">
+                <label for="faq-search-input">Search questions</label>
+                <input
+                    type="search"
+                    id="faq-search-input"
+                    placeholder="e.g. save, delete, name…"
+                    autocomplete="off"
+                >
+                <p id="faq-search-count" class="faq-search-count" aria-live="polite"></p>
+                <p id="faq-search-empty" class="faq-search-empty" hidden>
+                    No questions match your search. Try a different keyword or
+                    <a href="contact.html">contact us</a>.
+                </p>
+            </div>
         </section>
 
         <!-- General Questions -->
@@ -201,6 +216,6 @@
     </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 </html>

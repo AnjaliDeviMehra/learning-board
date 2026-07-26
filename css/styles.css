@@ -748,6 +748,108 @@ main aside h2 {
     font-size: 1rem;
 }
 
+.form-success p {
+    margin: 0 0 8px;
+}
+
+.form-success p:last-child {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Live character counter (Share form) */
+.char-count {
+    display: block;
+    font-size: 0.82rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+.char-count-short {
+    color: #c0392b;
+}
+
+/* FAQ accordion toggles (progressive enhancement) */
+.faq-card dt.faq-toggle {
+    cursor: pointer;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.faq-card dt.faq-toggle:hover,
+.faq-card dt.faq-toggle:focus-visible {
+    background-color: #f4faf6;
+    outline: none;
+}
+
+.faq-card dt.faq-toggle:focus-visible {
+    box-shadow: inset 0 0 0 2px #2d7a4f;
+}
+
+/* CSS-drawn chevron (no icon font / external library) */
+.faq-card dt.faq-toggle::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-left: auto;
+    margin-top: 3px;
+    flex-shrink: 0;
+    border-right: 2px solid #D4840E;
+    border-bottom: 2px solid #D4840E;
+    transform: rotate(45deg); /* points down when collapsed */
+    transition: transform 0.2s ease;
+}
+
+.faq-card dt.faq-toggle[aria-expanded="true"]::after {
+    transform: rotate(-135deg); /* points up when expanded */
+    margin-top: 7px;
+}
+
+/* FAQ keyword search (revealed by JS only) */
+.faq-search {
+    display: none;
+    margin-top: 20px;
+}
+
+.faq-search.faq-search-ready {
+    display: block;
+}
+
+.faq-search label {
+    display: block;
+    font-weight: 700;
+    color: #1b5e3b;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.faq-search input[type="search"] {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 14px;
+    border: 1px solid #cfd8d3;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.faq-search input[type="search"]:focus {
+    outline: none;
+    border-color: #1b5e3b;
+    box-shadow: 0 0 0 3px rgba(27, 94, 59, 0.12);
+}
+
+.faq-search-count {
+    color: #555;
+    font-size: 0.85rem;
+    margin: 8px 0 0;
+}
+
+.faq-search-empty {
+    color: #c0392b;
+    font-size: 0.9rem;
+    margin: 10px 0 0;
+}
+
 
 /* Mobile responsive */
 @media (max-width: 768px) {

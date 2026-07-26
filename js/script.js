@@ -24,79 +24,9 @@ function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// ===== SHARE FORM VALIDATION =====
-const shareForm = document.getElementById('share-form');
-
-if (shareForm) {
-    shareForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        let valid = true;
-
-        const name     = document.getElementById('share-name');
-        const email    = document.getElementById('share-email');
-        const role     = document.getElementById('share-role');
-        const company  = document.getElementById('share-company');
-        const title    = document.getElementById('share-title');
-        const category = document.getElementById('share-category');
-        const body     = document.getElementById('share-body');
-        const agree    = document.getElementById('share-agree');
-
-        if (name.value.trim().length < 2) {
-            showError(name, 'Please enter a display name (at least 2 characters).');
-            valid = false;
-        } else { clearError(name); }
-
-        if (!isValidEmail(email.value.trim())) {
-            showError(email, 'Please enter a valid email address.');
-            valid = false;
-        } else { clearError(email); }
-
-        if (role.value.trim() === '') {
-            showError(role, 'Please enter your job title or role.');
-            valid = false;
-        } else { clearError(role); }
-
-        if (company.value.trim() === '') {
-            showError(company, 'Please enter your company or organization.');
-            valid = false;
-        } else { clearError(company); }
-
-        if (title.value.trim().length < 5) {
-            showError(title, 'Please enter a post title (at least 5 characters).');
-            valid = false;
-        } else { clearError(title); }
-
-        if (category.value === '') {
-            showError(category, 'Please select a skill category.');
-            valid = false;
-        } else { clearError(category); }
-
-        if (body.value.trim().length < 50) {
-            showError(body, 'Please write at least 50 characters describing your experience.');
-            valid = false;
-        } else { clearError(body); }
-
-        if (!agree.checked) {
-            showError(agree, 'You must check this box before submitting.');
-            valid = false;
-        } else { clearError(agree); }
-
-        if (valid) {
-            shareForm.innerHTML = '<div class="form-success">✅ Thank you! Your post has been submitted. It will appear on the Browse Experiences page shortly.</div>';
-        }
-    });
-
-    // Clear error as user types
-    shareForm.querySelectorAll('input, textarea, select').forEach(function (field) {
-        field.addEventListener('input', function () {
-            if (field.value.trim() !== '') {
-                clearError(field);
-            }
-        });
-    });
-}
-
 // ===== CONTACT FORM VALIDATION =====
+// Share-form handling now lives in js/share.js. This file keeps the shared
+// validation helpers (used by both) and the contact-form handler.
 const contactForm = document.querySelector('form[action="#"]');
 
 if (contactForm && !document.getElementById('share-form')) {
