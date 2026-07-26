@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Browse Experiences - LearningBoard</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/browse.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -32,100 +33,67 @@
         </div>
   </header>
 
-    <main class="browse-page">
-    <section>
+  <section class="browse-hero">
+    <div class="browse-hero-inner">
       <h1>Browse Student Work Experiences</h1>
       <p>
-        This page lets students explore short lessons and advice shared by other students from internships,
-        co-op placements, part-time jobs, and volunteer work. The posts are organized by skill category so
-        users can quickly find advice that matches what they want to improve.
+        Explore short lessons and advice shared by other students from internships, co-op placements, part-time
+        jobs, and volunteer work — organized by skill category so you can quickly find advice that matches what
+        you want to improve.
       </p>
+      <form class="hero-search" id="hero-search-form" role="search" action="#">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input type="search" id="hero-search-input" aria-label="Search experiences" placeholder="Search experiences, e.g. “ask better questions”">
+        <button type="submit" class="btn-primary">Search</button>
+      </form>
+    </div>
+  </section>
+
+    <main class="browse-page">
+    <section class="browse-filters">
+      <button type="button" id="filter-toggle" class="filter-toggle" aria-expanded="false" aria-controls="filter-panel">
+        <i class="bi bi-funnel" aria-hidden="true"></i>
+        Filter by Category
+      </button>
+
+      <div id="filter-panel" class="filter-panel" hidden>
+        <fieldset>
+          <legend>Experience Categories</legend>
+
+          <div class="filter-option">
+            <input type="checkbox" id="filter-communication" value="communication">
+            <label for="filter-communication">💬 Communication</label>
+          </div>
+
+          <div class="filter-option">
+            <input type="checkbox" id="filter-tech" value="tech">
+            <label for="filter-tech">💻 Tech Skills</label>
+          </div>
+
+          <div class="filter-option">
+            <input type="checkbox" id="filter-teamwork" value="teamwork">
+            <label for="filter-teamwork">👥 Teamwork</label>
+          </div>
+
+          <div class="filter-option">
+            <input type="checkbox" id="filter-problem-solving" value="problem-solving">
+            <label for="filter-problem-solving">🧩 Problem Solving</label>
+          </div>
+        </fieldset>
+      </div>
     </section>
 
     <section>
-      <h2>Experience Categories</h2>
+      <div class="section-header">
+        <h2>All Experiences</h2>
+      </div>
 
-      <ul>
-        <li><strong>Communication:</strong> Tips for emails, meetings, presentations, and workplace conversations.</li>
-        <li><strong>Tech Skills:</strong> Advice about tools, coding, data, troubleshooting, and learning new software.</li>
-        <li><strong>Teamwork:</strong> Lessons about working with coworkers, asking for help, and supporting a team.</li>
-        <li><strong>Problem Solving:</strong> Examples of how students handled mistakes, pressure, or difficult tasks.</li>
-      </ul>
-    </section>
+      <div class="cards-grid" id="posts-container"></div>
+      <p class="posts-empty" id="posts-empty" hidden>No experiences match your search or filters yet.</p>
 
-    <section>
-      <h2>Featured Posts</h2>
-
-      <article>
-        <h3>How I Learned to Ask Better Questions at Work</h3>
-        <p><strong>Category:</strong> Communication</p>
-        <p><strong>Shared by:</strong> Mohammad Jalili</p>
-        <p>
-          During my placement, I learned that asking clear questions saves time for everyone. Instead of only saying
-          I was confused, I started explaining what I tried, where I got stuck, and what kind of help I needed.
-          This made it easier for my supervisor and coworkers to guide me.
-        </p>
-        <p><a href="share.html">Share a similar experience</a></p>
-      </article>
-
-      <article>
-        <h3>Using Checklists to Stay Organized</h3>
-        <p><strong>Category:</strong> Problem Solving</p>
-        <p><strong>Shared by:</strong> Student Contributor</p>
-        <p>
-          One student found that a simple daily checklist helped them avoid missing small tasks. Writing down the
-          task, deadline, and status made their work easier to track and helped them feel more confident.
-        </p>
-        <p><a href="skills-guide.html">Read related skill tips</a></p>
-      </article>
-
-      <article>
-        <h3>Learning New Software One Step at a Time</h3>
-        <p><strong>Category:</strong> Tech Skills</p>
-        <p><strong>Shared by:</strong> Student Contributor</p>
-        <p>
-          Starting a new tool can feel stressful at first. This post explains how watching short tutorials,
-          practicing with small tasks, and asking coworkers for examples helped the student improve faster.
-        </p>
-        <p><a href="skills-guide.html">Explore tech skill advice</a></p>
-      </article>
-    </section>
-
-    <section>
-      <h2>Browse by Skill Level</h2>
-
-      <table>
-        <caption>Suggested starting points for different student needs</caption>
-        <thead>
-          <tr>
-            <th scope="col">Student Need</th>
-            <th scope="col">Recommended Category</th>
-            <th scope="col">Example Topic</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Preparing for a first workplace role</td>
-            <td>Communication</td>
-            <td>How to introduce yourself professionally</td>
-          </tr>
-          <tr>
-            <td>Trying to improve technical confidence</td>
-            <td>Tech Skills</td>
-            <td>How to learn a new tool quickly</td>
-          </tr>
-          <tr>
-            <td>Working with a group or department</td>
-            <td>Teamwork</td>
-            <td>How to keep teammates updated</td>
-          </tr>
-          <tr>
-            <td>Handling mistakes or challenges</td>
-            <td>Problem Solving</td>
-            <td>How to fix an error and learn from it</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="load-more-wrap">
+        <button type="button" id="load-more-btn" class="btn-secondary">Load More</button>
+      </div>
     </section>
 
     <aside>
@@ -165,5 +133,8 @@
       <p>&copy; 2026 LearningBoard. Created by Vardan, Anjali, Isa, and Mohammad for DIGT 1302 – Web Development Basics.</p>
     </div>
   </footer>
+
+  <script src="data/posts.js"></script>
+  <script src="js/browse.js"></script>
 </body>
 </html>

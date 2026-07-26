@@ -151,6 +151,11 @@ header > div > a img {
     padding: 40px 30px;
 }
 
+.recent-experiences .cards-grid article:hover {
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+
 .browse-all {
     text-align: center;
 }

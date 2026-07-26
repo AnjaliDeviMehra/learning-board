@@ -100,6 +100,74 @@ header button:hover {
 }
 
 
+
+.browse-hero {
+    position: relative;
+    background-color: #143b28;
+    background-image: linear-gradient(135deg, rgba(15, 51, 33, 0.55), rgba(27, 94, 59, 0.35)), url('../image-files/browse-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 90px 30px;
+}
+
+.browse-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.browse-hero-inner h1 {
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 14px;
+    max-width: 640px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.browse-hero-inner p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin-bottom: 0;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border-radius: 50px;
+    padding: 6px 6px 6px 22px;
+    max-width: 560px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-search i {
+    color: #888;
+    font-size: 1rem;
+}
+
+.hero-search input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+    padding: 12px 0;
+    background: transparent;
+}
+
+.hero-search button {
+    border-radius: 50px;
+    padding: 12px 26px;
+    flex-shrink: 0;
+}
+
 .cta-banner {
     max-width: 1100px;
     margin: 0 auto 40px;
@@ -180,6 +248,10 @@ header button:hover {
 .cards-grid article:hover {
     box-shadow: 0 4px 16px rgba(27, 94, 59, 0.1);
     border-color: #1b5e3b;
+}
+
+.cards-grid article[hidden] {
+    display: none;
 }
 
 .card-top {
@@ -289,6 +361,7 @@ header button:hover {
     background-color: #e8f5ee;
     color: #1b5e3b;
 }
+
 
 
 
@@ -424,6 +497,14 @@ footer ul li a:hover {
     background-color: #1b5e3b;
     color: #fff;
     text-decoration: none !important;
+}
+
+.btn-secondary:disabled,
+.btn-secondary:disabled:hover {
+    background-color: #fff;
+    color: #a8bfb2;
+    border-color: #c8dfd0;
+    cursor: not-allowed;
 }
 
 /* ===== FORMS ===== */
@@ -851,8 +932,50 @@ main aside h2 {
 }
 
 
+/* Tablet responsive */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .browse-hero {
+        padding: 50px 20px;
+    }
+
+    .browse-hero-inner h1 {
+        font-size: 1.6rem;
+    }
+
+    .browse-hero-inner p {
+        font-size: 0.95rem;
+    }
+
+    .hero-search {
+        flex-wrap: wrap;
+        border-radius: 16px;
+        padding: 14px;
+    }
+
+    .hero-search i {
+        display: none;
+    }
+
+    .hero-search input[type="search"] {
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .hero-search button {
+        width: 100%;
+    }
 
     header > div {
         justify-content: space-between;
@@ -914,46 +1037,6 @@ main aside h2 {
         text-align: center;
         box-sizing: border-box;
     }
-}
-
-/* Browse page article cards styled to match home page posts */
-.browse-page > section > article {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.browse-page > section > article:hover {
-    box-shadow: 0 4px 16px rgba(27, 94, 59, 0.1);
-    border-color: #1b5e3b;
-}
-
-.browse-page > section > article h3 {
-    font-size: 1rem;
-    color: #1b5e3b;
-    line-height: 1.4;
-    margin: 0;
-}
-
-.browse-page > section > article p {
-    font-size: 0.88rem;
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.browse-page > section > article p strong {
-    color: #1b5e3b;
-}
-
-.browse-page > section > article a {
-    font-weight: bold;
 }
 
 /* Browse category list */
@@ -1059,7 +1142,6 @@ main aside h2 {
         font-size: 0.9rem;
     }
 
-    .browse-page > section > article,
     .credits-page section,
     .credits-page aside {
         padding: 16px;
