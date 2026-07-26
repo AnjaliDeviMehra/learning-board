@@ -43,6 +43,17 @@ Students who have workplace experience (part-time jobs, internships, co-op place
 - Added media queries for tablet and mobile: single-column layout, stacked buttons, static sidebar
 - Fixed header and footer structure on `skills-guide.html` to match all other pages
 
+## Phase 3 – Dynamic Behaviour and Functionality
+
+- Added client-side interactivity with vanilla JavaScript (no external libraries), each page-specific script kept in its own file under `js/`
+- Share Your Learning form (`js/share.js`): full client-side validation of name, email (regex), role, company, title, skill category, a 50-character minimum body, the post-type radio group, and the agreement checkbox
+- Added inline error messages, a live character counter on the experience field, and a success confirmation that echoes the submitted post title
+- Uses `preventDefault`, `createElement`, and `aria-invalid` to handle submission and report errors accessibly
+- FAQ page (`js/faq.js`): keyboard-accessible accordion using `aria-expanded` and `aria-controls`, toggled by click plus Enter/Space
+- Added a keyword search filter on the FAQ page with a live "Showing X of Y" count and a no-results message
+- Built with progressive enhancement so both pages remain usable with JavaScript turned off
+- Techniques used: DOM manipulation (`querySelector`, `createElement`, `appendChild`, `textContent`, `classList`), event handling with `addEventListener` (`submit`, `input`, `change`, `keyup`, `keydown`), and accessibility attributes
+
 ## GitHub Pages link
 
 https://anjalidevimehra.github.io/learning-board/
