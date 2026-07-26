@@ -27,6 +27,20 @@ Students who have workplace experience (part-time jobs, internships, co-op place
 
 
 
+## Phase 1 – HTML Structure and Content
+
+- Built the semantic HTML skeleton for all 8 pages (`index.html`, `browse.html`, `share.html`, `skills-guide.html`, `about.html`, `contact.html`, `faq.html`, `credits.html`), with no CSS or JavaScript yet
+- Consistent `<header>` with a logo link and `<nav aria-label="Main navigation">` containing the site-wide link list, repeated across every page
+- Used `<main>`, `<section>`, and a proper heading hierarchy (`h1`–`h3`) to structure page content semantically
+- Home page (`index.html`): hero intro, stats row, and a "Recent Experiences" list of sample posts marked up as `<article>` elements
+- Browse page (`browse.html`): experience category list, featured post `<article>` elements, and a "Browse by Skill Level" `<table>` with `<caption>` and `scope="col"` header cells
+- Credits page (`credits.html`): a `<table>` of team members and their contribution areas, plus an asset/reference credits section
+- Skills Guide (`skills-guide.html`): an `<aside>` skill-links sidebar paired with per-topic `<section id="...">` content blocks, connected with `aria-labelledby`
+- FAQ page (`faq.html`): question/answer content structured with `<dl>`/`<dt>`/`<dd>` definition lists, grouped into topic sections
+- Share Your Learning form (`share.html`) and Contact form (`contact.html`): built with `<fieldset>`/`<legend>` grouping, a `<label for="">` on every field, and native HTML validation attributes (`required`, `minlength`, `maxlength`, `type="email"`)
+- Baseline accessibility attributes were part of the markup from the start: `aria-current="page"` on the active nav link, `aria-hidden="true"` on decorative required-field asterisks, and `aria-controls`/`aria-expanded` on the (then non-functional) mobile menu button
+- Pages were plain, unstyled HTML at this stage — content and structure only, validated for correct markup before Phase 2 styling began
+
 ## Phase 2 – CSS Styling and Responsive Design
 
 - Added a single shared stylesheet (`css/styles.css`) linked to all pages
