@@ -189,3 +189,24 @@
 .university-callout strong {
     color: #1b5e3b;
 }
+
+/* Category pills interactive */
+.category-pills li {
+    cursor: pointer;
+}
+
+.category-pills li.active {
+    background-color: #1b5e3b;
+    color: white;
+}
+
+#category-info {
+    display: none;
+    background-color: #e8f5ee;
+    border-left: 4px solid #1b5e3b;
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-top: 15px;
+    color: #333;
+    font-size: 0.95rem;
+}
