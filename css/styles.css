@@ -1172,3 +1172,72 @@ main aside h2 {
 #back-to-top:hover {
     background-color: #2d7a4f;
 }
+
+/* ===== Phase 3: Skills Guide search ===== */
+
+.skill-search {
+    background-color: #e8f5ee;
+    border-left: 4px solid #1b5e3b;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 30px;
+}
+
+.skill-search h2 {
+    margin-top: 0;
+}
+
+.skill-search label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.skill-search-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#skill-search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #b8cfc1;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+#skill-search-input:focus {
+    outline: none;
+    border-color: #2d7a4f;
+    box-shadow: 0 0 0 3px rgba(45, 122, 79, 0.15);
+}
+
+#skill-search-status {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #1b5e3b;
+}
+
+#skill-no-results {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #fff3cd;
+    border-left: 4px solid #d4840e;
+    border-radius: 4px;
+    color: #664d03;
+}
+
+@media (max-width: 768px) {
+    .skill-search-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #clear-skill-search {
+        width: 100%;
+    }
+}
