@@ -42,7 +42,17 @@
       <h1 id="hero-title">Skills Guide</h1>
       <p>Use this page to explore practical, project-led learning paths for popular skills. Each skill includes what it is, why it matters, prerequisites, step-by-step build guidance, project ideas, resources, and next steps.</p>
     </section>
-     <section id="wrap-up" class="skill-section" aria-labelledby="wrap-title">
+     <section class="skill-search" aria-labelledby="skill-search-title"> <h2 id="skill-search-title">Find a Skill</h2>
+
+<label for="skill-search-input">Search the Skills Guide</label>
+
+<div class="skill-search-controls"> <input type="search" id="skill-search-input" placeholder="Try web, data, cloud, or security" autocomplete="off" > <button type="button" id="clear-skill-search" class="btn-secondary"> Clear </button> </div>
+
+<p id="skill-search-status" role="status" aria-live="polite"> Showing all 8 skills. </p>
+
+<p id="skill-no-results" hidden> No matching skills were found. Try another search term. </p> </section>
+    
+    <section id="wrap-up" class="skill-section" aria-labelledby="wrap-title">
           <h2 id="wrap-title">How to use this guide</h2>
           <p>Pick one skill and finish a small project end-to-end. Keep iterations short, document decisions, and seek feedback. Track progress with milestones (learn, build, deploy, share).</p>
         </section>
@@ -425,5 +435,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/skills-guide.js"></script>
 </body>
 </html>
